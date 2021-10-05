@@ -13,7 +13,7 @@
                     <div class="d-flex">
 
                         <div class="pr-4 pb-4">
-                            <img src="/storage/{{ $post->user->profile->image }}" class="rounded-circle w-100" style="max-width: 40px;">
+                            <img src="{{ $post->user->profile->profileImage() }}" class="rounded-circle w-100" style="max-width: 40px;">
                         </div>
 
                         <div class="d-flex pt-2">

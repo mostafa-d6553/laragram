@@ -86,11 +86,12 @@ class ProfileController extends Controller
             $image = Image::make(public_path("storage/{$imagepath}"))->fit(900 , 900);
             $image->save();
     
+            $imageArray = ['image'=> $imagepath];
         }
 
         $updated = array_merge(
             $data,
-            ['image'=> $imagepath],
+            $imageArray ?? [],
         );
 
         //dd($updated);
